@@ -1,0 +1,41 @@
+<div class="col-sm-6">
+
+    {{#each burgers}} {{#unless devoured}}
+
+    <div class="row notDevoured">
+
+        <div class="col-sm-8">
+            <p>{{burger}}</p>
+        </div>
+
+        <div class="col-sm-4">
+            <button class="btn-primary devourButton float-right" id={{id}}>Devour!</button>
+        </div>
+
+    </div>
+
+    {{/unless}} {{/each}}
+
+</div>
+
+<div class="col-sm-6">
+
+    {{#each burgers}} {{#if devoured}}
+
+    <div class="row devoured">
+
+        <div class="col-sm-2"></div>
+
+        <div class="col-sm-6">
+            <p>{{burger}}</p>
+        </div>
+
+        <div class="col-sm-4">
+            <button class="btn-primary makeButton" id={{id}}>Make a Fresh One!</button>
+        </div>
+
+    </div>
+
+    {{/if}} {{/each}}
+
+</div>

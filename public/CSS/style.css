@@ -1,0 +1,26 @@
+img {
+    width: 250px;
+    margin: auto;
+    display: block;
+}
+
+.notDevoured {
+    background-color: #00FF80;
+    margin-bottom: 5px;
+    margin-right: 2px;
+}
+
+.devoured {
+    background-color: #FF7155;
+    margin-bottom: 5px;
+    margin-left: 2px;
+    text-align: center;
+}
+
+.devourButton, .makeButton {
+    margin-top: 5px;
+}
+
+form {
+    width:400px;
+}
