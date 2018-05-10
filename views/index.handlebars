@@ -4,11 +4,16 @@
 
     <div class="row notDevoured">
 
-        <div class="col-sm-8">
+        <div class="col-sm-4">
             <p>{{burger}}</p>
         </div>
 
-        <div class="col-sm-4">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <input type="text" class="form-control customer" id = "customer{{id}}" placeholder="Enter your name to eat!">
+            </div>
+        </div>
+        <div class="col-sm-2">
             <button class="btn-primary devourButton float-right" id={{id}}>Devour!</button>
         </div>
 
@@ -24,14 +29,12 @@
 
     <div class="row devoured">
 
-        <div class="col-sm-2"></div>
-
         <div class="col-sm-6">
             <p>{{burger}}</p>
         </div>
 
-        <div class="col-sm-4">
-            <button class="btn-primary makeButton" id={{id}}>Make a Fresh One!</button>
+        <div class="col-sm-6">
+            <p>Eaten by {{customer}}</p>
         </div>
 
     </div>

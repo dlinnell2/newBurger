@@ -2,8 +2,15 @@ $(document).ready(function(){
 
     $('.devourButton').on('click', function(){
         var id=$(this).attr('id');
+
+        var customerName = $('#customer' + id).val().trim();
+        console.log('press')
         
-        $.ajax("/api/burger/eat/" + id, {
+       $.ajax({
+            url: "/api/burger/eat/" + id,
+            data: {
+                customer: customerName
+            },
             type:"PUT"
         }).then(function(){
             location.reload();
@@ -18,17 +25,6 @@ $(document).ready(function(){
                 location.reload();
             }
         })
-    })
-
-    $('.makeButton').on('click', function(){
-        var id=$(this).attr('id');
-        
-        $.ajax("/api/burger/make/" + id, {
-            type:"PUT"
-        }).then(function(){
-            location.reload();
-        })
-    
     })
 
 });
